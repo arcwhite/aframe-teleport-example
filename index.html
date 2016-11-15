@@ -1,25 +1,26 @@
 <!DOCTYPE html>
-<head>
-  <title>Controllers Left Behind</title>
-  <script src="https://aframe.io/releases/0.3.2/aframe.min.js"></script>
-  <script src="https://rawgit.com/fernandojsg/aframe-teleport-controls/master/dist/aframe-teleport-controls.min.js"></script>
-  <script src="./js/sky-shader.js"></script>
-</head>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Controllers Left Behind</title>
+    <script src="https://aframe.io/releases/0.3.2/aframe.min.js"></script>
+    <script src="https://rawgit.com/fernandojsg/aframe-teleport-controls/master/dist/aframe-teleport-controls.min.js"></script>
+    <script src="./js/sky-shader.js"></script>
+  </head>
 
-<body style="background-color: #000">
-  <a-scene>
-    <a-entity position="-1 4 0" light="color: #f4f4f4; intensity: 0.6; type: point"></a-entity>
-    <a-entity position="10 3 3" light="color: #47c9ff; intensity: 0.3; type: hemisphere"></a-entity>
-    <a-entity id="sky"
-                geometry="primitive: sphere; radius: 65;"
-                material="shader: skyGradient; colorTop: #eee; colorBottom: #53346D; side: back">
-    </a-entity>
-    <a-entity id="floor"
-              rotation="-90 0 0"
-              geometry="primitive: plane; width: 100; height: 100"
-              material="src: url(assets/floor.jpg); repeat: 80 80">
-    </a-entity>
-    <a-entity id="left-hand" teleport-controls vive-controls="hand: left"></a-entity>
-    <a-entity id="right-hand" teleport-controls="type: line" vive-controls="hand: right"></a-entity>
-  </a-scene>
-</body>
+  <body style="background-color: #000">
+    <a-scene>
+      <a-entity position="-1 4 0" light="color: #f4f4f4; intensity: 0.6; type: point"></a-entity>
+      <a-entity position="10 3 3" light="color: #47c9ff; intensity: 0.3; type: hemisphere"></a-entity>
+      <a-entity id="sky"
+                  geometry="primitive: sphere; radius: 65;"
+                  material="shader: skyGradient; colorTop: #eee; colorBottom: #53346D; side: back"></a-entity>
+      <a-entity id="floor"
+                rotation="-90 0 0"
+                geometry="primitive: plane; width: 100; height: 100"
+                material="src: url(assets/floor.jpg); repeat: 80 80"></a-entity>
+      <a-entity id="left-hand" teleport-controls vive-controls="hand: left"></a-entity>
+      <a-entity id="right-hand" teleport-controls="type: line" vive-controls="hand: right"></a-entity>
+    </a-scene>
+  </body>
+</html>
